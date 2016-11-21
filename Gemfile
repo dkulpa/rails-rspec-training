@@ -34,6 +34,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
+  gem 'capybara', '~> 2.5'
+  gem 'factory_girl_rails', '~> 4.7.0'
 end
 
 group :development do
@@ -48,6 +50,7 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner', '~> 1.5'
+  gem 'ffaker', '~> 2.3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
