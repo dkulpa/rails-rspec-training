@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Album do
   subject { FactoryGirl.build(:album) }
   it 'is not valid without a title' do
+    subject.title = nil
     expect(subject).not_to be_valid
   end
 
@@ -12,7 +13,6 @@ RSpec.describe Album do
   end
 
   it 'is valid with proper data' do
-    subject.title = FFaker::Music.album
     expect(subject).to be_valid
   end
 end
