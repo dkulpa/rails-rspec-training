@@ -17,6 +17,10 @@ class ContactsController < ApplicationController
     end
   end
 
+  def show
+    @contact = Contact.find(params[:id])
+  end
+
   private
 
   def contact_params
